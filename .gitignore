@@ -1,2 +1,6 @@
 .venv
 D:\Django Framework Básico\django1\settings.py
+__pycache__
+*.*~
+*.pyc
+.idea
