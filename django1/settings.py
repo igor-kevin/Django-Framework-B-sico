@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^xeaxlq=p)al8=4@whc0&vzd8$ul$n*xt6tz4q$4l#2s44i)2q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  #
 
 
 # Application definition
@@ -117,9 +117,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'  # Usado durante o desenvolvimento !
-STATIC_ROOT = Path(BASE_DIR, 'staticfiles')  # Usado durante a produção !
+STATIC_ROOT = Path(BASE_DIR).joinpath(
+    'staticfiles')  # Usado durante a produção !
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGOUT_REDIRECT_URL = 'index'
